@@ -15,10 +15,7 @@ padding: 0;
 line-height: 1.7;
 background-color: lightgray;}
 
-.container {
-    max-width: 300px;
-    margin-bottom:10px;
-}
+
 
 .title{
     color: #f72bdb;
@@ -43,8 +40,13 @@ background-color: lightgray;}
      box-shadow: 0 11px 20px rgb(125, 125, 125);
      padding: 15px;
 }
+.button:hover{
+    background-color: #d3d3d3;
+}
+.goon{text-decoration: none ; color: #000;;}
 .note{border-left:4px solid #b7b7b7;}
 .note::before{content: "💡";}
+.note2::before{content: "😭😭😭";}
 pre{border-left: 4px solid #f72bdb;background-color: #d7d7d7;}
 
 </style>
@@ -53,7 +55,7 @@ pre{border-left: 4px solid #f72bdb;background-color: #d7d7d7;}
 
     <h1 class="title">Workshop: HTML Headings</h1>
     <h3 class="subtitle">ฝึกใช้ &lt;h1&gt; - &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</h3>
-    <div class="container"></div>
+    <div class="container">
     
 <!--Section1-->
 <section class="card">
@@ -115,12 +117,12 @@ pre{border-left: 4px solid #f72bdb;background-color: #d7d7d7;}
  <pre>&lt;h3 style="font-size: 50px; color: blue;"&gt;Big Custom Heading&lt;/h3&gt;</pre>
 
     </ul>
-    <p class="note">  จำไว้ว่า ลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหา ไม่ควรใช ้H5 เพื่อให้ “ตัวเล็กลง” หรือ ใช้ H1
+    <p class="note2">  จำไว้ว่า ลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหา ไม่ควรใช ้H5 เพื่อให้ “ตัวเล็กลง” หรือ ใช้ H1
 เพื่อให้ “ตัวใหญ่ขึ้น” → ต้องแก้ด้วย CSS เท่านั้น</p>
     </section>
 </section>
 </div>
-<span class="button"><a href="index.html">&larr; Back to HTML Tutorial</a></span>
+<span class="button">&larr;<a class="goon" href="index.html">Back to HTML Tutorial</a></span>
 
 </body>
 </html>

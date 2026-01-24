@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+</head>
+
+<style>
+
+    body{
+        font-family: sans-serif;
+    }
+    header{
+        text-align: center;
+        padding: 20px;
+    }
+    .container{
+        background-color: rgb(223, 223, 223);
+        max-width: 1200px;
+        margin: auto;
+
+    }
+    .card1{
+        margin:  10px 10px 35px 10px;
+        padding: 25px 25px 25px 25px;
+        background-color: rgb(247, 247, 247);
+        box-shadow: 0px 2px 10px 0px;
+        border-radius: 10px;
+        border-top: 7px rgb(250, 40, 138) solid;
+        height: fit-content;
+
+
+    }
+    .card2{
+        padding: 25px 25px 25px 25px;
+        box-shadow: 0px 0px 5px 0px;
+        border-radius: 10px;
+
+    }
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:25px
+    }
+
+        .card-grid2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:25px
+    }
+
+    a{
+        text-decoration: none;
+    }
+    mark{
+        background-color: rgb(209, 209, 209);
+        border-radius: 5px;
+    }
+    .image-link img:hover{
+        transform: scale(33.1);
+        transform: rotate(10000080deg);
+        transition: 1s;
+    }
+    pre{
+        border-left: 5px rgb(250, 40, 138) solid;
+        background-color: rgb(233, 233, 233);
+        padding: 25px 0px 25px 25px;
+        line-height: 30px;
+    }
+    .btn-link{
+        background-color: blueviolet;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color:aliceblue;
+    }
+    .note{border-left:4px solid #b7b7b7;}
+    .note::before{content: "💡";}
+
+    @media (max-width: 992px) {
+
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media (max-width: 576px){
+        .card-grid2 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+
+<body>
+
+    <main>
+<div class="container">
+
+    <header><h1 style="color: rgb(250, 40, 138);">Workshop : Various Links</h1>
+    <p style="color: rgb(65, 65, 65);">เรียนรู้ลิงค์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p></header>
+<div class="card-grid">
+        <section class="card1">
+
+            <h2>1. External Links</h2>
+            <div class="card2">
+                <b><a target="_blank" href="https://www.google.com/?hl=th">Visit Wikipedia</a></b>
+                <p><code><mark>target="_blank"</mark></code> <code>เปิดลิงค์ในแท็บใหม่</code></p>
+            </div>
+            <br>
+            <div class="card2">
+                <b><a target="_self" href="https://www.wikipedia.org/">Visit Google</a></b>
+                <p><code><mark>target="_self"</mark></code> <code>เปิดลิงค์ในหน้าเดิม</code></p>
+            </div>
+
+        </section>
+
+        <section class="card1" style="border-color: rgb(36, 172, 218);">
+
+            <h2>2. Internal Link & Anchor Links</h2>
+            <pre>&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="#jump"&gt;Jump to Section&lt;/a&gt;
+&lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
+            </pre>
+            <a style="text-decoration: underline;" href="">Click to Jump</a>
+            <h3>This is the jump target.</h3>
+
+        </section>
+
+        <section class="card1" style="border-color: rgb(12, 219, 150);">
+            <h2>3. Email Links</h2>
+            <pre>&lt;a href=mailto:"amongus@sus.sugoma?subject=KindaSus"&gt;
+    Send an Email
+&lt;/a&gt;
+            </pre>
+            <a style="text-decoration: underline;" href="mailto:amongus@sus.sugoma?subject=KindaSus"> Send an Email</a>
+        </section>
+
+        <section class="card1" style="border-color: rgb(255, 165, 47);">
+            <h2>4. Download Links</h2>
+            <pre>&lt;a herf="files/gooningpic.jpg" download&gt;Download File&lt;/a&gt;</pre>
+            <a href="downloadable/meme-shrek.gif"><h3 style="background-color: rgb(255, 217, 0); padding: 15px; max-width: fit-content;">Download file</h3></a>
+            <code>ต้องมีไฟล์ในโฟลเดอร์จึงจะดาวน์โหลดได้จริง</code>
+        </section>
+</div>        
+        <section class="card1" style="border-color: blueviolet;">
+
+            <h2>5. Button Link</h2>
+            <p>ลิงค์ที่ออกแบบให้คล้ายปุ่ม เหมาะกับปุ่มสมัคร ปุ่มอ่านเพิ่มเติ่ม หรือปุ่มนำทาง</p>
+            <pre>&lt;a href="https://www.nigtinger.com" class="btn-link"&gt;
+Visit Website
+&lt;/a&gt;</pre>
+        <a href="https://www.nigtinger.com" class="btn-link">Visit Website</a>
+        <pre>&lt;button onclick="document.location='index.html'"&gt;HTML Tutorial&lt;/button&gt;
+- มักใช้เมื่อลิงก์ไป หน้าในเว็บเดียวกัน
+- ผูกกับ DOM (document) โดยตรง
+
+&lt;button onclick="location.href='https://www.example.com'"&gt;Visit Website&lt;/button&gt;
+- นิยมใช้มากกว่า
+- เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
+- ผูกกับ window โดยตรง</pre>
+<div class="card-grid2">
+
+<div><p>ปุ่ม <code><mark>document.location</mark></code></p>
+<button onclick="document.location='index.html'">HTML Tutorial</button></div>
+<div><p>ปุ่ม <code><mark>location.href</mark></code></p>
+<button onclick="location.href='https://www.example.com'">Visit Website</button></div>
+<div><p>ตัวอย่างปุ่มจาก https://cssnippet.shefail.dev</p>
+<button onclick="Youtube">SUBSCRIBE</button></div>
+<div><p>เพิ่มขอบทอง</p>
+<button onclick="Youtube">SUBSCRIBE</button></div>
+<div>
+<p>เพื่มอนิเมชั่นเมื่อชี้ปุ่ม</p>
+<button onclick="Youtube">SUBSCRIBE</button></div>
+<div>
+<p>ปุ่มสีดำ ขอบทอง แสงวิ้ง</p>
+<button onclick="Youtube">SUBSCRIBE</button></div>
+
+</div>
+
+
+
+
+</section>
+        </section>
+
+        <section class="card1" style="border-color: blanchedalmond;">
+
+            <h2>6. Image Link</h2>
+            <p>คลิกที่รูปภาพเพื่อเปิดลิงค์</p>
+            <pre>&lt;a href="https://youtube.com"&gt;
+&lt;img src="images/sample.jpg" width="250"&gt;
+&lt;/a&gt;</pre>
+        <a class="image-link" href="https://youtube.com">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" width="250">
+</a>
+<p class="note">หากต้องการใช้รูปของตนเอง ต้องเก็บรูปไว้ในโฟลเดอร์ เช่น <code><mark>image/photo.jpg</mark></code></p>
+
+        </section>
+    </main>
+
+    <footer>
+<span class="button">&larr;<a class="goon" href="index.html">Back to HTML Tutorial</a></span>
+    </footer>
+    
+
+</div>
+</body>
+</html>

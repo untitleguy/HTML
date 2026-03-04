@@ -266,6 +266,7 @@ position: relative;
     width: 100%;
     height: auto;
     top: -130px;
+    filter:invert();
 }
 
 .post-description {
@@ -498,12 +499,6 @@ position: relative;
 }
 
 
-
-
-
-
-
-
 .widget .contactasap{
     display: flex;
     flex-direction: column;
@@ -543,4 +538,155 @@ position: relative;
 .widget .contactasap .form-input:focus{
     border-color: #720494;
     box-shadow: 0 0 0 3px rgb(185, 35, 255);
+}
+
+.widget-title{
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.btn-facebook{
+display: inline-block;
+background-color: #1877F2 ;
+font-weight: 800;
+padding: 15px;
+margin-top: 10px;
+border-radius: 8px;
+color: white;
+text-decoration: none;
+}
+.btn-facebook:hover{}
+
+.author-photo{
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.facebook-stat{
+    background-color: #8b8b8b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.sponser{
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.sponser img{
+    filter: blur(3px);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gold-table{
+    border: 1px solid var(--line);
+    border-collapse: collapse;
+    align-items: center;
+    width: 100%;
+    transition-duration: 1s;
+    filter: blur(10px);
+    
+}
+.gold-table:hover{
+    filter: blur(0px);
+}
+
+.gold-table th{
+    border: 1px solid var(--line);
+    padding: 10px;
+}
+.gold-table td{
+    border: 2px solid var(--line);
+    padding: 10px;
+}
+
+.gold-table thead{
+background-color: var(--thbg);
+}
+
+.gold-table tbody{
+background-color: var(--tbobg);
+}
+
+.gold-table tbody th {
+background-color: var(--tcbg);
+}
+
+.gold-table tbody th:last-child{
+background-color: #035e8b !important;
+}
+
+
+.gold-table tbody tr:last-child{
+    background-color: #cfff76;
+}
+
+.gold-table .tcen{
+    text-align: center;
+}
+.gold-table .tright{
+    text-align: right;
+}
+
+.gold-table .up{
+    color: var(--up);
+    font-weight: 700;
+}
+.gold-table .down{
+    color: var(--down);
+    font-weight: 700;
+}
+
+.icon {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid #20812d00;
+  border-right: 6px solid #00000000;
+}
+
+.up {
+  border-bottom: 10px solid var(--up);
+}
+
+.down {
+  border-top: 10px solid var(--down);
+}
+:root{
+
+    --line: rgb(255, 172, 47);
+    --tbg: rgb(255, 207, 105);
+    --thbg: rgb(247, 119, 0);
+    --tbobg: rgb(255, 207, 105);
+    --tcbg: rgb(255, 233, 39);
+    --tt: #cfff76;
+    --up: rgb(0, 255, 0);
+    --down: red;
+
+
+}
+
+
+.wrap-gold-table{
+    overflow: hidden;
+    border: solid 1px var(--line);
+    background-color: var(--tbg);
+    border-radius: 15px;
 }

@@ -41,14 +41,19 @@
     <!-- Navbar-->
     <nav class="main-nav">
         <div class="wrapper">
+            <div id="hamburger-menu">
+                <span></span>
+            </div>
+            <div id="menu">
             <ul class="nav-menu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">AI Technology</a></li>
+                <li><a href="index.html">AI Technology</a></li>
                 <li><a href="#">Machine Learning</a></li>
                 <li><a href="#">Deep Learning</a></li>
                 <li><a href="#">AI Tools</a></li>
-                <li><a href="#">AI News</a></li>
+                <li><a href="#contact">AI News</a></li>
             </ul>
+        </div>
         </div>
     </nav>
 
@@ -107,7 +112,7 @@
             <main class="post-list">
 
 
-                <div class="card">
+                <div class="card order-box-image">
 
 
                     <p class="post-headline">CATEGORY ARCHIVES:<strong>RESPONSIVE DESIGN</strong> </p>
@@ -135,8 +140,7 @@
                     </div>
                 </div>
 
-
-                <div class="card">
+                <div class="card order-box-table">
                     <p class="post-headline">CATEGORY ARCHIVES:<strong> CSS DISPLAY PROPERTY</strong></p>
                     <div class="post-header">
                         <h3>เปรียบเทียบ display: block vs inline-block</h3>
@@ -204,8 +208,9 @@
                             property</a><span>•</span></div>
 
                 </div>
-                <div class="card">
-                    <h2 style="text-align: center;">📞 ติดต่อเรา</h2>
+
+                <div class="card order-box-form">
+                    <h2 style="text-align: center;" id="contact">📞 ติดต่อเรา</h2>
 
                     <div class="contact-form-main-card">
 
@@ -307,9 +312,9 @@
 
             </main>
 
-            <aside>
-                <div class="widget">
-                    <div class="widget-title">สวัสดีครับ ยินดีต้อนรับ</div>
+            <aside class="sidebar">
+                <div class="widget aside-box-authorimage">
+                    <div class="widget-title aside-box-authorimage">สวัสดีครับ ยินดีต้อนรับ</div>
                     <p class="post-description">ผมชื่อ Suksawat เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ SME
                     และ
                     Startup
@@ -321,8 +326,8 @@
 
 
 
-                <div class="widget">
-                    <div class="widget newsregister">
+                <div class="widget aside-box-news">
+                    <div class="widget newsregister aside-box-news">
                         <h3>📧 รับข่าวสารใหม่</h3>
                         <form>
                             <div class="form-group">
@@ -361,7 +366,7 @@
 
 
 
-                <div class="widget">
+                <div class="widget aside-box-asapcontact">
                     <div class="widget contactasap">
                         <h3>💬 ติดต่อด่วน</h3>
                         <form>
@@ -389,14 +394,14 @@
 
                     </div>
 
-                    <div class="widget">
+                    <div class="widget aside-box-facebook">
                     <div class="widget-title">สวัสดีครับ ยินดีต้อนรับ</div>
                     
                     <div class="facebook-stat">กล่อง Facebook like(ตัวอย่าง) 203,779</div>
                     
                    <a href="" class="btn-facebook"> กดติดตามใน Facebook</a>
                 </div>
-                    <div class="widget">
+                    <div class="widget aside-box-sponsor">
                         <div class="widget-title">Sponser</div>
                         <div class="sponser">
 
@@ -487,10 +492,10 @@
                         
                             <tr>
                                 <th style="background-color: #cfff76;">ทั้งปี</th>
-                                <td class="tcen up"><span class="icon up">+15,300</td>
+                                <td class="tcen up">+15,300</td>
                                 <td class="tright">64,550</td>
                                 <td class="tright">81,950</td>
-                                <td class="tcen up"><span class="icon up">+22,550</td>
+                                <td class="tcen up">+22,550</td>
                                 <td class="tright">42,550</td>
                                 <td class="tright">67,400</td>
                             </tr>
@@ -515,7 +520,28 @@
         
     </footer>
 
+    <script>
+        var burgerMenu = document.getElementById('hamburger-menu');
+        var overlay = document.getElementById('menu');
+
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
+
 </body>
 
 </html>
-

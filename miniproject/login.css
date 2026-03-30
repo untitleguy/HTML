@@ -1,0 +1,134 @@
+/*===========================================================================*/
+/* style  login page */
+/*===========================================================================*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+    font-family: "Noto Sans Thai", sans-serif;
+    background: linear-gradient(90deg,
+            #6a5af9 0%,
+            #7b5cf6 30%,
+            #ff6ec7 70%,
+            #ff8a5c 100%);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+/*===========================================================================*/
+/* style card login */
+/*===========================================================================*/
+.card {
+    border: 2px solid #ffffff;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    width: 35%;
+    height: 30%;
+
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.form-label {
+    display: block;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fdfdfd;
+
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.row-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+
+    font-size: 0.9rem;
+
+    background-color: #f5f5f542;
+    color: #555;
+    border: 1px solid #fafafa;
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+
+    background-color: #f5f5f542;
+    color: #555;
+    border: 1px solid #fafafa;
+
+    border-radius: 4px;
+}
+
+/*================ checkbox ====================*/
+.form-checkbox-group {
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.82rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    accent-color: rgb(228, 99, 228);
+
+    transform: scale(1.25);
+}
+
+/*================== Button ==================*/
+.form-button {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    margin-top: 15px;
+
+    cursor: pointer;
+}
+
+.login-button {
+    background: linear-gradient(45deg, rgb(247, 44, 138) 0%, rgb(199, 111, 240) 80%);
+}
+
+.logout-button {
+    background: linear-gradient(45deg, rgb(248, 229, 146) 0%, #aa31fc 80%);
+}
+
+.login-button:hover {
+    opacity: 0.7;
+}
+
+.logout-button:hover {
+    opacity: 0.7;
+}

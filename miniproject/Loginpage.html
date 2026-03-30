@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="card">
+    <h1>Login</h1>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <div class="row-icon">
+                <input type="email" name="email" id="email" placeholder="-------@gmail.com" class="form-input" required>
+                <img src="https://img.icons8.com/?size=100&id=NuuGQCcn31b0&format=png&color=000000" alt="icon gmail" class="icon">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <div class="row-icon">
+                <input type="password" name="password" id="password" placeholder="password" class="form-input" required>
+                <img src="https://img.icons8.com/?size=100&id=94&format=png&color=000000" alt="icon password" class="icon">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-item">
+                <input type="checkbox" name="remember" id="remember" value="remember">
+                <label for="remember"> remember</label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="form-button login-button">Login</button>
+            
+            <a href="Create-account.html" class="form-button logout-button" style="text-decoration: none; display: inline-block; text-align: center;">Create account</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevents the page from just refreshing
+        
+        // This is where you'd normally check the email/password
+        console.log("Logging in...");
+        
+        // Redirect to your project page
+        window.location.href = "main/miniproject.html";
+    });
+</script>
+</body>
+</html>
